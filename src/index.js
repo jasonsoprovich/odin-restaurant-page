@@ -1,13 +1,31 @@
 import "./styles.css";
 import createLogo from './logo.js';
 
-const content = document.getElementById('content');
+const container = document.createElement('div');
+container.id = 'container';
+document.body.appendChild(container);
+
+const headerContainer = document.createElement('div');
+headerContainer.id = 'header-container';
+
 const logo = createLogo();
 logo.classList.add('logo');
-content.appendChild(logo);
+headerContainer.appendChild(logo);
 
+const nav = document.createElement('header');
+nav.id = 'nav';
+nav.innerHTML = `
+  <button class='nav-btn'>Home</button>
+  <button class='nav-btn'>Menu</button>
+  <button class='nav-btn'>About</button>
+`;
+headerContainer.appendChild(nav);
 
+container.appendChild(headerContainer);
 
+const content = document.createElement('div');
+content.id = 'content';
+container.appendChild(content);
 
   // < h1 > Mercer Speakeasy</h1>
   //   <p>
@@ -23,5 +41,3 @@ content.appendChild(logo);
   //     is
   //     open for walk-ins at <span class="highlight">8 PM on Sundays</span>. Join us for an unforgettable evening.
   //   </p>
-
-console.log('Hello world');
