@@ -8,9 +8,13 @@ document.body.appendChild(container);
 const headerContainer = document.createElement('div');
 headerContainer.id = 'header-container';
 
+const logoButton = document.createElement('button');
+logoButton.classList.add('logo-button');
+
 const logo = createLogo();
 logo.classList.add('logo');
-headerContainer.appendChild(logo);
+logoButton.appendChild(logo);
+headerContainer.appendChild(logoButton);
 
 const nav = document.createElement('header');
 nav.id = 'nav';

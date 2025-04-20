@@ -55,9 +55,11 @@ h6 {
 :root {
   --fg: #e9d9b4;
   --bg: #271012;
+  --accent: #d63031;
 }
 
 body {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: var(--bg, black);
@@ -65,20 +67,21 @@ body {
 
 #header-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px 40px;
   margin-bottom: 20px;
 }
 
 #nav {
   display: flex;
-  justify-content: center;
   gap: 15px;
 }
 
 .nav-btn {
+  font-size: 1.2rem;
   background: none;
-  border: 1px solid #e9d9b4;
+  border: none;
   color: #e9d9b4;
   padding: 10px 20px;
   cursor: pointer;
@@ -86,23 +89,41 @@ body {
 }
 
 .nav-btn:hover {
-  background-color: #e9d9b4;
-  color: #271012;
+  color: var(--accent, red);
 }
 
 .logo {
-  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
 .logo svg {
-  width: 320px;
+  width: 200px;
   height: auto;
 }
 
 .logo .text {
   fill: var(--fg, white);
+  transition: fill 0.3s ease, color 0.3s ease;
 }
 
 .logo .crystal {
   stroke: var(--fg, white);
+  transition: stroke 0.3s ease, color 0.3s ease;
+}
+
+.logo-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-button:hover .text {
+  fill: var(--accent, red);
+}
+
+.logo-button:hover .crystal {
+  stroke: var(--accent, red);
 }
