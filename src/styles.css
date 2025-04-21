@@ -111,7 +111,7 @@ body {
   transition: stroke 0.3s ease, color 0.3s ease;
 }
 
-.logo-button {
+.logo-btn {
   background: none;
   border: none;
   padding: 0;
@@ -120,10 +120,14 @@ body {
   align-items: center;
 }
 
-.logo-button:hover .text {
+.logo-btn:hover .text {
   fill: var(--accent, red);
 }
 
-.logo-button:hover .crystal {
+.logo-btn:hover .crystal {
   stroke: var(--accent, red);
+}
+
+#content {
+  color: var(--fg);
 }

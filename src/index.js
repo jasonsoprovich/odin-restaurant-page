@@ -1,5 +1,12 @@
 import "./styles.css";
 import createLogo from './logo.js';
+import loadHome from './home.js';
+import loadMenu from './menu.js';
+import loadAbout from './about.js';
+
+function init() {
+  loadHome();
+}
 
 const container = document.createElement('div');
 container.id = 'container';
@@ -8,40 +15,36 @@ document.body.appendChild(container);
 const headerContainer = document.createElement('div');
 headerContainer.id = 'header-container';
 
-const logoButton = document.createElement('button');
-logoButton.classList.add('logo-button');
+const logoBtn = document.createElement('button');
+logoBtn.classList.add('logo-btn');
 
 const logo = createLogo();
 logo.classList.add('logo');
-logoButton.appendChild(logo);
-headerContainer.appendChild(logoButton);
+logoBtn.appendChild(logo);
+headerContainer.appendChild(logoBtn);
 
 const nav = document.createElement('header');
 nav.id = 'nav';
 nav.innerHTML = `
-  <button class='nav-btn'>Home</button>
-  <button class='nav-btn'>Menu</button>
-  <button class='nav-btn'>About</button>
+<button class='nav-btn' id='home-btn'>Home</button>
+<button class='nav-btn' id='menu-btn'>Menu</button>
+<button class='nav-btn' id='about-btn'>About</button>
 `;
-headerContainer.appendChild(nav);
 
+headerContainer.appendChild(nav);
 container.appendChild(headerContainer);
+
+const homeBtn = document.getElementById('home-btn');
+const menuBtn = document.getElementById('menu-btn');
+const aboutBtn = document.getElementById('about-btn');
+
+logoBtn.addEventListener('click', loadHome);
+homeBtn.addEventListener('click', loadHome);
+menuBtn.addEventListener('click', loadMenu);
+aboutBtn.addEventListener('click', loadAbout);
 
 const content = document.createElement('div');
 content.id = 'content';
 container.appendChild(content);
 
-  // < h1 > Mercer Speakeasy</h1>
-  //   <p>
-  //     Welcome to our <span class="highlight">award-winning cocktail bar and eatery</span>, where the atmosphere is dimly
-  //     lit
-  //     and lively, and the service is laid-back and fun. Celebrate with expertly crafted cocktails and <span
-  //       class="highlight">Asian-inspired cuisine</span>, best shared amongst loved ones in a welcoming room that
-  //     pulsates to
-  //     the rhythm of old-school hip-hop.
-  //   </p>
-  //   <p>
-  //     Located within the historic <span class="highlight">Mercer Building</span> in the heart of downtown, our speakeasy
-  //     is
-  //     open for walk-ins at <span class="highlight">8 PM on Sundays</span>. Join us for an unforgettable evening.
-  //   </p>
+init();
