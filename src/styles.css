@@ -53,16 +53,21 @@ h6 {
 }
 
 :root {
-  --fg: #e9d9b4;
-  --bg: #271012;
-  --accent: #d63031;
+  --rose-taupe: hsla(11, 21%, 46%, 1);
+  --rose-taupe-2: hsla(11, 23%, 41%, 1);
+  --desert-sand: hsla(25, 41%, 80%, 1);
+  --beaver: hsla(16, 22%, 61%, 1);
+  --caput-mortuum: hsla(7, 42%, 26%, 1);
+  --fg: var(--caput-mortuum);
+  --bg: var(--desert-sand);
+  --accent: var(--rose-taupe-2);
 }
 
 body {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--bg, black);
+  background-color: var(--bg);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -96,14 +101,14 @@ body {
   font-size: 1.2rem;
   background: none;
   border: none;
-  color: #e9d9b4;
+  color: var(--fg);
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-btn:hover {
-  color: var(--accent, red);
+  color: var(--accent);
 }
 
 .logo {
@@ -116,12 +121,12 @@ body {
 }
 
 .logo .text {
-  fill: var(--fg, white);
+  fill: var(--fg);
   transition: fill 0.3s ease, color 0.3s ease;
 }
 
 .logo .crystal {
-  stroke: var(--fg, white);
+  stroke: var(--fg);
   transition: stroke 0.3s ease, color 0.3s ease;
 }
 
@@ -135,11 +140,11 @@ body {
 }
 
 .logo-btn:hover .text {
-  fill: var(--accent, red);
+  fill: var(--accent);
 }
 
 .logo-btn:hover .crystal {
-  stroke: var(--accent, red);
+  stroke: var(--accent);
 }
 
 #content-container {
