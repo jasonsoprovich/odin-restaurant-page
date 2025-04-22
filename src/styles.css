@@ -63,6 +63,16 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: var(--bg, black);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 #header-container {
@@ -132,6 +142,13 @@ body {
   stroke: var(--accent, red);
 }
 
+#content-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 #content {
   display: flex;
   flex-direction: column;
@@ -156,4 +173,14 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   text-align: center;
+}
+
+#footer-container {
+  background-color: var(--bg);
+  color: var(--fg);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
