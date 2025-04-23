@@ -1,13 +1,17 @@
 function loadAbout() {
+  const contentContainer = document.getElementById('content-container');
   const content = document.getElementById('content');
 
+  contentContainer.innerHTML = '';
   content.innerHTML = '';
+  content.classList.add('content');
 
   const aboutDiv = document.createElement('div');
   aboutDiv.classList.add('about');
 
   const headline = document.createElement('h1');
   headline.textContent = 'About';
+  aboutDiv.appendChild(headline);
 
   const description = document.createElement('p');
   description.innerHTML = `
@@ -27,11 +31,10 @@ function loadAbout() {
 
     Aliquam lacinia est odio, at pellentesque velit fermentum sed. Nulla elementum ultrices diam blandit tempus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas ut lacus ac neque iaculis sodales eu at felis. Aenean pellentesque ut nibh et maximus. Nullam posuere tellus felis, sit amet consectetur lacus suscipit ac. Curabitur tempus efficitur magna. Fusce id risus rutrum, accumsan leo ut, commodo diam. Ut finibus, est at aliquet tincidunt, nunc dolor sagittis ante, id gravida sem nulla id augue. Ut sit amet leo purus. Nulla facilisi.
   `;
-
-  aboutDiv.appendChild(headline);
   aboutDiv.appendChild(description);
 
   content.appendChild(aboutDiv);
+  contentContainer.appendChild(content);
 }
 
 export default loadAbout;

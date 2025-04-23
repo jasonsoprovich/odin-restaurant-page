@@ -11,4 +11,6 @@ This project is part of [The Odin Project](https://www.theodinproject.com/) curr
 - **Modular Design**: Each section of the website (Home, Menu, About) is encapsulated in its own module.
 - **Webpack Integration**: The project is bundled using Webpack for efficient asset management.
 
-## Project Structure
+## Credits
+
+- Header image source: <https://unsplash.com/photos/a-person-pouring-a-drink-into-a-glass-6UEcRVbfZ_0>
