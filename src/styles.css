@@ -195,19 +195,45 @@ body {
 
 #footer-container {
   background-color: var(--fg);
+  color: var(--bg);
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 15px;
   /* border: 2px yellow dotted; */
 }
 
-#footer-container p {
-  color: var(--fg);
+#footer-container>p {
   font-size: 0.9rem;
   text-align: center;
+  color: var(--bg);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem;
+  width: 100%;
+  max-width: 800px;
+  /* margin-bottom: 30px; */
+  text-align: left;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--bg);
+  border-bottom: 1px solid var(--bg);
+  padding-bottom: 5px;
+}
+
+.footer-column p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
   color: var(--bg);
 }
 
@@ -220,7 +246,7 @@ body {
 .footer-logo svg {
   display: block;
   max-width: 100%;
-  width: 600px;
+  width: 500px;
   height: auto;
   /* border: 2px green dotted; */
 }
