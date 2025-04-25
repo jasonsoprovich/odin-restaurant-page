@@ -107,13 +107,13 @@ body {
   margin: 20px auto;
   padding: 20px;
   max-width: 800px;
-  width: 100%;
-  background-color: var(--fg);
+  width: 80%;
+  /* background-color: var(--fg); */
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: var(--bg);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  color: var(--fg);
   /* debug */
-  /* border: 3px dotted hotpink; */
+  /* border: 1px solid var(--fg); */
 }
 
 #content h1 {
@@ -126,18 +126,6 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   text-align: center;
-}
-
-#footer-container {
-  background-color: var(--fg);
-  color: var(--bg);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  /* debug */
-  /* border: 3px dotted lime; */
 }
 
 #nav {
@@ -199,8 +187,48 @@ body {
 
 .header-image {
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
   object-fit: cover;
   display: block;
   margin: 0 auto;
+}
+
+#footer-container {
+  background-color: var(--fg);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px yellow dotted; */
+}
+
+#footer-container p {
+  color: var(--fg);
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--bg);
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-logo svg {
+  display: block;
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  /* border: 2px green dotted; */
+}
+
+.footer-logo .text {
+  fill: var(--bg);
+}
+
+.footer-logo .crystal {
+  stroke: var(--bg);
 }
