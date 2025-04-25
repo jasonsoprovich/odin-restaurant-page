@@ -1,7 +1,7 @@
 export default function createLogo() {
   const logoContainer = document.createElement("div");
   logoContainer.innerHTML = `
-    <svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+<svg width="190" height="110" viewBox="53 0 50 75" xmlns="http://www.w3.org/2000/svg">
       <style>
         .bg { fill: #1a1a1a; }
         .text { font-family: "Montserrat", sans-serif; fill: #ffffff; font-weight: 600; font-size: 36px; letter-spacing: 5px; }
