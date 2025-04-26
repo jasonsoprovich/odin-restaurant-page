@@ -19,15 +19,20 @@ function loadHome() {
   homeDiv.classList.add('home');
 
   const headline = document.createElement('h1');
-  headline.textContent = 'Shio Speakeasy';
+  headline.textContent = 'A Hidden Gem in the Heart of the City';
   homeDiv.appendChild(headline);
 
-  const description = document.createElement('p');
+  const description = document.createElement('div');
   description.innerHTML = `
-    Welcome to our <span class="highlight">award-winning cocktail bar and eatery</span>, where the atmosphere is dimly
-    lit and lively, and the service is laid-back and fun. Celebrate with expertly crafted cocktails and <span
-    class="highlight">Asian-inspired cuisine</span>, best shared amongst loved ones in a welcoming room that pulsates
-    to the rhythm of old-school hip-hop.
+    <p>Tucked behind an unmarked door, <span class='highlight'>Shio</span> is an award-winning Japanese cocktail bar and eatery defined by stillness, intimacy, and style. In our softly lit space, lofi hip-hop floats from the decks of a nightly DJ, setting the mood for refined conversation and slow enjoyment.
+
+    We invite you to gather close, sip something extraordinary, and savor our elevated Japanese-inspired menu designed for sharing.</p>
+
+    <ul>
+        <li>Small plates. Perfect Pours. Quiet Celebration</li>
+        <li>Lofi beats. Always at a conversation volume.</li>
+        <li>Crafted cocktails with a Tokyo soul.</li>
+    </ul>
   `;
   homeDiv.appendChild(description);
   content.appendChild(homeDiv);

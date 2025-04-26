@@ -258,3 +258,13 @@ body {
 .footer-logo .crystal {
   stroke: var(--bg);
 }
+
+.highlight {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.italic {
+  font-style: italic;
+  color: var(--accent);
+}
