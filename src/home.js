@@ -23,18 +23,20 @@ function loadHome() {
   homeDiv.appendChild(headline);
 
   const description = document.createElement('div');
+  description.classList.add('home-description');
   description.innerHTML = `
-    <p>Tucked behind an unmarked door, <span class='highlight'>Shio</span> is an award-winning Japanese cocktail bar and eatery defined by stillness, intimacy, and style. In our softly lit space, lofi hip-hop floats from the decks of a nightly DJ, setting the mood for refined conversation and slow enjoyment.
-
-    We invite you to gather close, sip something extraordinary, and savor our elevated Japanese-inspired menu designed for sharing.</p>
-
-    <ul>
-        <li>Small plates. Perfect Pours. Quiet Celebration</li>
-        <li>Lofi beats. Always at a conversation volume.</li>
-        <li>Crafted cocktails with a Tokyo soul.</li>
-    </ul>
+    <p>
+      Tucked behind an unmarked door, <span class="highlight">Shio</span> is an award‑winning Japanese cocktail bar
+      and eatery defined by stillness, intimacy, and style. In our softly lit space, lofi hip‑hop floats from the decks
+      of a nightly DJ, setting the mood for refined conversation and slow enjoyment.
+    </p>
+    <p>
+      We invite you to gather close, sip something extraordinary, and savor our elevated Japanese‑inspired menu designed
+      for sharing.
+    </p>
   `;
   homeDiv.appendChild(description);
+  
   content.appendChild(homeDiv);
   contentContainer.appendChild(content);
 }
